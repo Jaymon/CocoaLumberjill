@@ -1,9 +1,9 @@
 //  Created by Jay Marcyes on 9/12/15.
 
 @import Foundation;
-///#import "DDLog.h"
 #import <CocoaLumberjack/CocoaLumberjack.h>
 #import "CLJLogMacros.h"
+#import "CLJLogEmail.h"
 
 
 /**
@@ -21,13 +21,18 @@ extern DDLogLevel ddLogLevel;
 
 
 /**
+ The public interface to sending the logs via email
+ */
+@property (nonatomic, readonly, nonnull) CLJLogEmail *emailInstance;
+
+/**
  configure the logger with the given loglevel
  
  basically this just calls configure and setLogLevelFromString: in one call
 
  @param logLevel see setLogLevelFromString: for the value (eg, all, debug, warn)
  */
-+ (void)configureWithLogLevel:(NSString *)logLevel;
++ (void)configureWithLogLevel:(nonnull NSString *)logLevel;
 
 /**
  *  configures the loggers we use, this is meant to be called from wherever you
@@ -40,6 +45,6 @@ extern DDLogLevel ddLogLevel;
  *
  *  @param  logLevel    value of verbos, debug, info, warn, error, or off
  */
-+ (void)setLogLevelFromString:(NSString *)logLevel;
++ (void)setLogLevelFromString:(nonnull NSString *)logLevel;
 
 @end
