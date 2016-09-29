@@ -3,6 +3,7 @@
 @import Foundation;
 ///#import "DDLog.h"
 #import <CocoaLumberjack/CocoaLumberjack.h>
+#import "CLJLogMacros.h"
 
 
 /**
@@ -40,16 +41,5 @@ extern DDLogLevel ddLogLevel;
  *  @param  logLevel    value of verbos, debug, info, warn, error, or off
  */
 + (void)setLogLevelFromString:(NSString *)logLevel;
-
-@end
-
-
-/**
- *  Internal logging formatter class, I found the default system logging really verbose
- *  in a bad way, full of useless information and yet taking up half of the console,
- *  this formatter will hopefully fix that and give us information we can actually
- *  use.
- */
-@interface CLJLogFormatter : NSObject <DDLogFormatter>
 
 @end
