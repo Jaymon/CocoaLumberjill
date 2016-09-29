@@ -1,12 +1,40 @@
 # CocoaLumberJill
 
-Wraps CocoaLumberJack to format logging and make it easy to send logs via email.
+Wraps CocoaLumberJack to format logging and make it easy to send logs via email, among other things.
 
 
-## If I install the pod, what do I get?
+## Configure the logs
 
-something good?
+```objective-c
+#import "CocoaLumberjill.h"
 
+// ...
+
+[CocoaLumberjill configureWithLogLevel:@"all"]; // you can also use @"info", @"debug", etc.
+```
+
+
+## Email the logs
+
+```objective-c
+#import "CocoaLumberjill.h"
+
+@interface SomeViewController () <CocoaLumberjillEmailDelegate>
+@end
+
+@implementation ViewController
+
+- (IBAction)handleSomeEvent:(id)sender
+{
+    NSString *subject = @"These are the logs";
+    [[CocoaLumberjill emailInstance] composeEmailUsingController:self
+                                                    toRecipients:@[@"email@example.com"]
+                                                     withSubject:subject
+                                                         andBody:@""];
+}
+
+@end
+```
 
 
 ## Installation
@@ -14,12 +42,11 @@ something good?
 Use [Cocoapods](https://cocoapods.org/). To install it, simply add the following line to your Podfile:
 
 ```ruby
-pod "CocoaLumberJill"
+pod "CocoaLumberjill"
 ```
 
 
 ## License
 
-Available under the MIT license. See the LICENSE file for more info.
-
+Available under the BSD license (matching [CocoaLumberjack](https://github.com/CocoaLumberjack/CocoaLumberjack)). See the LICENSE file for more info.
 
