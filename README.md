@@ -1,6 +1,6 @@
-# CocoaLumberJill
+# CocoaLumberjill
 
-Wraps CocoaLumberJack to format logging and make it easy to send logs via email, among other things.
+Wraps CocoaLumberjack to format logging and make it easy to send logs via email, among other things.
 
 
 ## Configure the logs
@@ -12,6 +12,8 @@ Wraps CocoaLumberJack to format logging and make it easy to send logs via email,
 
 [CocoaLumberjill configureWithLogLevel:@"all"]; // you can also use @"info", @"debug", etc.
 ```
+
+You can change this at anytime and the logs from then on will obey the new rule, so, for example, you could have it usually be set to **warn** but if you see something wrong you could wire up a three finger long press or something that would change the log level to **verbose**.
 
 
 ## Email the logs

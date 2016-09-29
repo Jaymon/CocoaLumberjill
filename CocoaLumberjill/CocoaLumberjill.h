@@ -23,7 +23,7 @@ extern DDLogLevel ddLogLevel;
 /**
  The public interface to sending the logs via email
  */
-+ (CLJLogEmail *)emailInstance;
++ (nonnull CLJLogEmail *)emailInstance;
 
 /**
  configure the logger with the given loglevel
