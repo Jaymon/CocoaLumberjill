@@ -1,0 +1,26 @@
+PODS:
+  - CocoaLumberjack (3.0.0):
+    - CocoaLumberjack/Default (= 3.0.0)
+    - CocoaLumberjack/Extensions (= 3.0.0)
+  - CocoaLumberjack/Core (3.0.0)
+  - CocoaLumberjack/Default (3.0.0):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (3.0.0):
+    - CocoaLumberjack/Default
+  - CocoaLumberjill (0.0.1):
+    - CocoaLumberjack
+
+DEPENDENCIES:
+  - CocoaLumberjill (from `../`)
+
+EXTERNAL SOURCES:
+  CocoaLumberjill:
+    :path: ../
+
+SPEC CHECKSUMS:
+  CocoaLumberjack: c823149bccc5519a9447aeb433be7b1212a7d6a5
+  CocoaLumberjill: bee4fd6f302d633e9fe4e6877e55708a9cb48e20
+
+PODFILE CHECKSUM: d225bcdc80b6ed66d8906914041975b23e3adda2
+
+COCOAPODS: 1.0.1
