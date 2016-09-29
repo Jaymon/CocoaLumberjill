@@ -17,6 +17,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    DDLogDebug(@"view has loaded");
+    
     // Do any additional setup after loading the view, typically from a nib.
     DDLogMethod();
 }
