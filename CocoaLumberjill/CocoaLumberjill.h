@@ -2,8 +2,8 @@
 
 @import Foundation;
 #import <CocoaLumberjack/CocoaLumberjack.h>
-#import "CLJLogMacros.h"
 #import "CLJLogEmail.h"
+#import "CLJLogMacros.h"
 
 
 /**
@@ -23,7 +23,7 @@ extern DDLogLevel ddLogLevel;
 /**
  The public interface to sending the logs via email
  */
-@property (nonatomic, readonly, nonnull) CLJLogEmail *emailInstance;
++ (CLJLogEmail *)emailInstance;
 
 /**
  configure the logger with the given loglevel

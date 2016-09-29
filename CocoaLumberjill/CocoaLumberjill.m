@@ -15,7 +15,7 @@ DDLogLevel ddLogLevel = DDLogLevelInfo;
 
 @implementation CocoaLumberjill
 
-- (CLJLogEmail *)emailInstance
++ (CLJLogEmail *)emailInstance
 {
     return [CLJLogEmail sharedInstance];
 }
