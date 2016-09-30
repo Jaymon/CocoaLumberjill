@@ -15,6 +15,17 @@ Wraps CocoaLumberjack to format logging and make it easy to send logs via email,
 
 You can change this at anytime and the logs from then on will obey the new rule, so, for example, you could have it usually be set to **warn** but if you see something wrong you could wire up a three finger long press or something that would change the log level to **verbose**.
 
+Then, you use the CocoaLumberjack commands just like always, so something like:
+
+```objective-c
+DDLogDebug(@"This is the log message");
+```
+
+Will result in a log message like:
+
+    [D|MM-DD-YY HH:MM:SS:SSS] This is the log message [FILE:LINE]
+
+
 
 ## Email the logs
 
@@ -45,6 +56,12 @@ Use [Cocoapods](https://cocoapods.org/). To install it, simply add the following
 
 ```ruby
 pod "CocoaLumberjill"
+```
+
+or, to get the latest and greatest:
+
+```ruby
+pod 'CocoaLumberjill', :git => 'https://github.com/Jaymon/CocoaLumberjill', :branch => 'master'
 ```
 
 
